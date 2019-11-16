@@ -2,6 +2,7 @@
 
 ## Git Workflow
 
+* git clone https://github.com/Thunderguts13/mod426.git
 * git checkout -b "feature-name-des-features"
 * Regelmässig commiten und pushen
 * git checkout master
