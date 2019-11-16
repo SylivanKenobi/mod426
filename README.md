@@ -5,6 +5,7 @@
 * git clone https://github.com/Thunderguts13/mod426.git
 * git checkout -b "feature-name-des-features"
 * Regelmässig commiten und pushen
+..* Täglich git add -A, git commit -am "meassage" && git push
 * git checkout master
 * git pull
 * git checkout -
