@@ -1,2 +1,6 @@
 /.idea/
+<<<<<<< HEAD
 /.target/
+=======
+/target/
+>>>>>>> 9f1ddc7... Create tests for controllers, change db to mariadb

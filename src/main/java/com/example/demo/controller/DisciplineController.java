@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Discipline;
 import com.example.demo.service.DisciplineService;
+import com.example.demo.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -16,8 +17,11 @@ import java.util.List;
 @RequestMapping("/api/discipline")
 public class DisciplineController {
 
-    @Autowired
-    DisciplineService disciplineService;
+    private final DisciplineService disciplineService;
+
+    public DisciplineController(DisciplineService disciplineService) {
+        this.disciplineService = disciplineService;
+    }
 
     @GetMapping
     public ResponseEntity<List<Discipline>> getAllDisciplines() {

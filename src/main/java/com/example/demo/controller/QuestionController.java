@@ -16,16 +16,20 @@ import java.util.List;
 @RequestMapping("/api/question")
 public class QuestionController {
 
-    @Autowired
-    QuestionService questionService;
+
+    private final QuestionService questionService;
+
+    public QuestionController(QuestionService questionService) {
+        this.questionService = questionService;
+    }
 
     @GetMapping
-    public ResponseEntity<List<Question>> getAllDisciplines() {
+    public ResponseEntity<List<Question>> getAllQuestions() {
         return ResponseEntity.ok().body(this.questionService.getAll());
     }
 
     @PostMapping
-    public ResponseEntity<Question> createDiscipline(@RequestBody Question question) {
+    public ResponseEntity<Question> createQuestion(@RequestBody Question question) {
         return ResponseEntity.ok().body(this.questionService.saveQuestion(question));
     }
 }
