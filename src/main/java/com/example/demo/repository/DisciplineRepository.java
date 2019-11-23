@@ -1,8 +1,8 @@
 package com.example.demo.repository;
 
-import com.example.demo.model.User;
+import com.example.demo.model.Discipline;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends JpaRepository<User, Long>, CrudRepository<User, Long> {
+public interface DisciplineRepository extends JpaRepository<Discipline, Long>, CrudRepository<Discipline, Long> {
 }

@@ -7,12 +7,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class User {
+public class Question {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_artikel")
@@ -20,8 +19,8 @@ public class User {
     private long id;
 
     @NotNull
-    private String name;
+    private String question;
 
     @NotNull
-    private String firstname;
+    private String answer;
 }
