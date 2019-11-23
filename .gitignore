@@ -1,1 +1,5 @@
 /.idea/
+<<<<<<< HEAD
+=======
+/.target/
+>>>>>>> 1947b03... add gitignore
