@@ -25,4 +25,9 @@ public class Question {
 
     @NotNull
     private String answer;
+
+    public Question(String question, String answer) {
+        this.question = question;
+        this.answer = answer;
+    }
 }

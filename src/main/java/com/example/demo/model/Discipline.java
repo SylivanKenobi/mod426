@@ -39,5 +39,11 @@ public class Discipline {
     private String title;
 
     @OneToMany
-    private List<Question> question;
+    @JoinColumn(name="disciplineFk")
+    private List<Question> questions;
+
+    public Discipline(String title, List<Question> questions) {
+        this.title = title;
+        this.questions = questions;
+    }
 }

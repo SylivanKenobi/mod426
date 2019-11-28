@@ -61,7 +61,7 @@ public class DisciplineControllerTest {
         questions.add(question3);
         discipline = Discipline.builder()
                 .title("English")
-                .question(questions)
+                .questions(questions)
                 .build();
 
     }

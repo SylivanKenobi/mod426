@@ -1,15 +1,11 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Discipline;
+import com.example.demo.model.Question;
 import com.example.demo.service.DisciplineService;
-import com.example.demo.service.QuestionService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,5 +27,10 @@ public class DisciplineController {
     @PostMapping
     public ResponseEntity<Discipline> createDiscipline(@RequestBody Discipline discipline) {
         return ResponseEntity.ok().body(this.disciplineService.saveDiscipline(discipline));
+    }
+
+    @GetMapping("/random")
+    public ResponseEntity<Discipline> createRandomDiscipline() {
+        return ResponseEntity.ok().body(this.disciplineService.createTestDiscipline());
     }
 }
