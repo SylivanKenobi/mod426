@@ -6,7 +6,7 @@ insert into Question (id, question, answer, discipline_fk) values ('1', 'Was erg
                                                                  ('2', 'Was ergibt 22 - 13?', '9', '1'),
                                                                  ('3', 'Was ergibt 7 * 7?', '49', '1'),
 
-                                                                 ('4', 'Rechtschreibung: "die Blätter am Baum sind Grün."', 'Die Blätter am Baum sind grün.', '2'),
+                                                                 ('4', 'Mehrzahl: "Gurke"', 'Gurken', '2'),
                                                                  ('5', 'Verb: "Tanz"', 'tanzen', '2'),
                                                                  ('6', 'Mehrzahl: "Banane"', 'Bananen', '2'),
 
