@@ -1,0 +1,18 @@
+version: '3.1'
+
+volumes:
+  maria-db:
+
+services:
+  db:
+    image: mariadb:latest
+    restart: always
+    volumes:
+      - maria-db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Eltern
+      MYSQL_USER: Sylvain
+      MYSQL_PASSWORD: Eltern
+      MYSQL_DATABASE: school
+    ports:
+      - 3306:3306
