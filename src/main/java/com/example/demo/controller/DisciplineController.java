@@ -24,6 +24,11 @@ public class DisciplineController {
         return ResponseEntity.ok().body(this.disciplineService.getAll());
     }
 
+    @GetMapping("/{discipline}")
+    public ResponseEntity<Discipline> getDisciplines(@PathVariable String discipline) {
+        return ResponseEntity.ok().body(this.disciplineService.findByDiscipline(discipline));
+    }
+
     @PostMapping
     public ResponseEntity<Discipline> createDiscipline(@RequestBody Discipline discipline) {
         return ResponseEntity.ok().body(this.disciplineService.saveDiscipline(discipline));

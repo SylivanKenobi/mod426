@@ -34,4 +34,8 @@ public class DisciplineService {
         }
         return this.disciplineRepository.save(new Discipline("Test", this.questionRepository.saveAll(questions)));
     }
+
+    public Discipline findByDiscipline(String discipline) {
+       return this.disciplineRepository.findDisciplineByTitle(discipline);
+    }
 }
