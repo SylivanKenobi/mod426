@@ -9,19 +9,10 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
-//{
-//        "title": "Test",
-//        "question": [
-//        {
-//        "question": "Hallo?",
-//        "answer": "Fuck you"
-//        },
-//        {
-//        "question": "Hallo?",
-//        "answer": "Fuck you"
-//        }
-//        ]
-//        }
+/**
+ * @author Sylvain Gilgen
+ * Discipline model class
+ */
 
 @Entity
 @NoArgsConstructor

@@ -8,6 +8,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+/**
+ * @author Sylvain Gilgen
+ * Question model class
+ */
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
