@@ -1,5 +1,5 @@
 function createForm(questions) {
-    debugger;
+
     var str = '';
     for(var i = 0; i < questions.length; i++)
     {
