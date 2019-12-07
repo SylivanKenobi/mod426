@@ -6,7 +6,7 @@ function createForm(discipline) {
         str += `<input  type=text size='40' id=${'answer' + i} onchange=validate(discipline,this.value,this.id)></br>`
         str += `</br>`
     }
-    str += "<button type=\"reset\"  id=\"reset\">Zurücksetzen</button>"
+    str += "<button type=\"reset\"  class=\"btn btn-secondary btn-sm\" id=\"reset\">Zurücksetzen</button>"
     document.getElementById('form').innerHTML = str;
 }
 
