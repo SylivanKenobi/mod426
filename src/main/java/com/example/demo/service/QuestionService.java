@@ -22,8 +22,8 @@ public class QuestionService {
     /**
      *
      * @param question
-     * @return created Question
-     * To create a new question
+     * @return save created Question in database
+     * To create a new question and save it in the database
      */
     public Question saveQuestion(Question question) {
         return this.questionRepository.save(question);
@@ -31,7 +31,7 @@ public class QuestionService {
 
     /**
      *
-     * @return list of all Questions
+     * @return get list of all Questions
      * To get all questions saved in database.
      */
     public List<Question> getAll() {
@@ -41,8 +41,8 @@ public class QuestionService {
     /**
      *
      * @param amount of questions to create
-     * @return list of created Questions
-     * To display set amount of questions in frontend
+     * @return create new question and add to list / database
+     * To create a random question for testing purposes.
      */
     public List<Question> createRandomQuestion(int amount) {
         List<Question> questions = new ArrayList<>();
