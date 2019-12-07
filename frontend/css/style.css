@@ -1,0 +1,31 @@
+h1 {
+    font-size: 72px;
+    font-family: fantasy
+}
+
+p {
+    font-size: 18px;
+    color: cornsilk;
+    font-style: oblique;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+form  {
+    text-align: center;
+    font-size: 18px;
+    color: black;
+
+}
+
+form.button {
+    background-color: unset;
+    background: rgba(0,0,0,0);
+}
+
+.aufgabe {
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    background: rgba(0, 0, 0, 0.5)
+}

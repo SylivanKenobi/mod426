@@ -10,6 +10,7 @@
     <script src="scripts/validator.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="scripts/createForm.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 </head>
 <body background="../static/img/englisch.jpg">
 <nav class="navbar navbar-inverse">
@@ -25,7 +26,7 @@
         </ul>
     </div>
 </nav>
-<form id="form"></form>
+<form id="form" class="aufgabe"></form>
 <script>
     var discipline;
     httpGet("englisch").done(function (data) {
