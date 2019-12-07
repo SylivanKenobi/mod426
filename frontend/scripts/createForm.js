@@ -7,7 +7,7 @@ function createForm(questions) {
         str += `<input  type=text size='40'></br>`
         str += `</br>`
     }
-    str += "<button type=\"reset\"  id=\"reset\">Zurücksetzen</button>"
+    str += "<button type=\"reset\"  class=\"btn btn-secondary btn-sm\" id=\"reset\">Zurücksetzen</button>"
     document.getElementById('form').innerHTML = str;
 
 }
