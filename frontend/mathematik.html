@@ -25,8 +25,8 @@
     </div>
 </nav>
 <form id="form"></form>
-<script>createForm()</script>
-<!-- Method to recive the Object  -->
-<script>httpGet("mathematik")</script>
+<script>
+    httpGet("mathematik").done(function (data) {createForm(data.questions)});
+</script>
 </body>
 </html>

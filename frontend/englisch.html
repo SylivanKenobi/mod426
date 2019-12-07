@@ -24,9 +24,9 @@
         </ul>
     </div>
 </nav>
-<!-- Method to recive the Object  -->
-<div><script>httpGet("englisch")</script></div>
 <form id="form"></form>
-<script>createForm()</script>
+<script>
+    httpGet("englisch").done(function (data) {createForm(data.questions)});
+</script>
 </body>
 </html>
