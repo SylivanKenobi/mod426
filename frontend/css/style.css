@@ -15,11 +15,12 @@ form  {
     text-align: center;
     font-size: 18px;
     color: black;
-    background: rgba(0, 0, 0, 0.5)
-    .button {
-        background-color: unset;
-        background: rgba(0,0,0,0);
-    }
+
+}
+
+form.button {
+    background-color: unset;
+    background: rgba(0,0,0,0);
 }
 
 .aufgabe {
