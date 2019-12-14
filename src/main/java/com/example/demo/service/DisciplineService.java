@@ -11,8 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ *
+ * Discipline service class. This class manages and tests disciplines.
  * @author Sylvain Gilgen
- * Discipline service class
  */
 @Service
 public class DisciplineService {
@@ -27,12 +28,13 @@ public class DisciplineService {
      *
      * @return List of all Disciplines
      */
-    public List<Discipline> getAll() {
+    public List<Discipline> getAllDisciplines() {
         return this.disciplineRepository.findAll();
     }
 
     /**
      *
+     * Used to save a discipline.
      * @param discipline to create
      * @return created Discipline
      */
@@ -42,6 +44,7 @@ public class DisciplineService {
 
     /**
      *
+     * Creates a new discipline to test if everything is working as it should.
      * @return created Discipline
      */
     public Discipline createTestDiscipline() {
@@ -54,6 +57,7 @@ public class DisciplineService {
 
     /**
      *
+     * To search a discipline by its name.
      * @param discipline
      * @return Discipline
      */
