@@ -28,7 +28,7 @@ public class DisciplineController {
      */
     @GetMapping
     public ResponseEntity<List<Discipline>> getAllDisciplines() {
-        return ResponseEntity.ok().body(this.disciplineService.getAll());
+        return ResponseEntity.ok().body(this.disciplineService.getAllDisciplines());
     }
 
     /**
