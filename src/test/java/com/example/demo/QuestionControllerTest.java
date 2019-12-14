@@ -20,12 +20,14 @@ import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 
 @RunWith(MockitoJUnitRunner.class)
+// Tests the controller for the questions
 public class QuestionControllerTest {
 
     @Mock
     QuestionService questionService;
 
     @Before
+    // initializes data
     public void init() {
         QuestionController questionController = new QuestionController(questionService);
         Question question = Question.builder()
@@ -35,7 +37,9 @@ public class QuestionControllerTest {
     }
 
     @Test
-    public void shouldCreateQuestion() {
+    // refactoring 14.12.2019 rename method to start with a verb
+    // creates a question
+    public void createQuestion() {
         QuestionController questionController = new QuestionController(questionService);
         Question question = Question.builder()
                 .question("How are you?")
@@ -51,7 +55,9 @@ public class QuestionControllerTest {
     }
 
     @Test
-    public void shouldGetAllQuestions() {
+    // refactoring 14.12.2019 rename method to start with a verb
+    // gets all the questions
+    public void getAllQuestions() {
         QuestionController questionController = new QuestionController(questionService);
         Question question = Question.builder()
                 .question("How are you?")
