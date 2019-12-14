@@ -11,6 +11,7 @@ import java.util.List;
 /**
  * @author Sylvain Gilgen
  * Question service class
+ * To get all questions saved in database to display in frontend
  */
 @Service
 public class QuestionService {
@@ -21,7 +22,8 @@ public class QuestionService {
     /**
      *
      * @param question
-     * @return created Question
+     * @return save created Question in database
+     * To create a new question and save it in the database
      */
     public Question saveQuestion(Question question) {
         return this.questionRepository.save(question);
@@ -29,20 +31,22 @@ public class QuestionService {
 
     /**
      *
-     * @return list of all Questions
+     * @return get list of all Questions
+     * To get all questions saved in database.
      */
     public List<Question> getAll() {
         return this.questionRepository.findAll();
-    }
+}
 
     /**
      *
-     * @param amount of questions to create
-     * @return list of created Questions
+     * @param questionAmount of questions to create
+     * @return create new question and add to list / database
+     * To create a random question for testing purposes.
      */
-    public List<Question> createRandomQuestion(int amount) {
+    public List<Question> createRandomQuestion(int questionAmount) {
         List<Question> questions = new ArrayList<>();
-        for (int i = 0; i < amount; i++) {
+        for (int i = 0; i < questionAmount; i++) {
             questions.add(new Question(i,"Frage" + "" + i, "Antwort" + " " + i));
         }
         return this.questionRepository.saveAll(questions);
