@@ -23,6 +23,7 @@ import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 
 @RunWith(MockitoJUnitRunner.class)
+// Tests the controller for disciplin.
 public class DisciplineControllerTest {
 
     @Mock
@@ -33,9 +34,9 @@ public class DisciplineControllerTest {
 
     @Mock
     QuestionController questionController;
-
+    // refactoring 14.12.2019 rename question to question1.
     private DisciplineController disciplineController;
-    private Question question;
+    private Question question1;
     private Question question2;
     private Question question3;
     private Discipline discipline;
@@ -44,7 +45,7 @@ public class DisciplineControllerTest {
     @Before
     public void init() {
         disciplineController = new DisciplineController(disciplineService);
-        question = Question.builder()
+        question1 = Question.builder()
                 .question("How are you?")
                 .answer("good")
                 .build();
@@ -56,7 +57,7 @@ public class DisciplineControllerTest {
                 .question("How are you?")
                 .answer("good")
                 .build();
-        questions.add(question);
+        questions.add(question1);
         questions.add(question2);
         questions.add(question3);
         discipline = Discipline.builder()
@@ -66,9 +67,10 @@ public class DisciplineControllerTest {
 
     }
 
-
     @Test
-    public void shouldCreateDiscipline() {
+    // Refactoring 14.12.2019 rename method to start with a verb
+    // creates discipline
+    public void createDiscipline() {
         when(disciplineService.saveDiscipline(any(Discipline.class))).thenReturn(discipline);
 
         ResponseEntity<?> response = disciplineController.createDiscipline(discipline);
