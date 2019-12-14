@@ -36,17 +36,17 @@ public class QuestionService {
      */
     public List<Question> getAll() {
         return this.questionRepository.findAll();
-    }
+}
 
     /**
      *
-     * @param amount of questions to create
+     * @param questionAmount of questions to create
      * @return create new question and add to list / database
      * To create a random question for testing purposes.
      */
-    public List<Question> createRandomQuestion(int amount) {
+    public List<Question> createRandomQuestion(int questionAmount) {
         List<Question> questions = new ArrayList<>();
-        for (int i = 0; i < amount; i++) {
+        for (int i = 0; i < questionAmount; i++) {
             questions.add(new Question(i,"Frage" + "" + i, "Antwort" + " " + i));
         }
         return this.questionRepository.saveAll(questions);
